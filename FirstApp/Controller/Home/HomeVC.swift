@@ -54,7 +54,7 @@ class HomeVC: UIViewController {
 
                }
 
-               print("dkdkd")
+               print("something happened")
 
            }
 
@@ -72,8 +72,25 @@ extension HomeVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let objCell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell
         let post = objPostList[indexPath.row]
-        objCell?.titleLabel.text = post?.title ?? ""
+        objCell!.setData(post:post)
         return objCell!
+    }
+    
+}
+
+extension HomeVC : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 350
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        let objDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "DeatilVC") as? DetailVC
+        let post = objPostList[indexPath.row]
+        if let objDetailVC = objDetailVC {
+            objDetailVC.post = post
+            self.navigationController?.pushViewController(objDetailVC, animated: true)
+        }
+        
     }
     
 }
