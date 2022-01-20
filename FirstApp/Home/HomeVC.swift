@@ -66,11 +66,13 @@ class HomeVC: UIViewController {
 
 extension HomeVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return objPostList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let objCell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell
+        let post = objPostList[indexPath.row]
+        objCell?.titleLabel.text = post?.title ?? ""
         return objCell!
     }
     
