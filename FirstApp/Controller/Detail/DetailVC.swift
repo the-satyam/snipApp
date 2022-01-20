@@ -22,7 +22,7 @@ class DetailVC: UIViewController {
 
         // Do any additional setup after loading the view.
         userId.text = "UserID -  \(post?.userId ?? 0 )"
-        postId.text = "POstId- \(post?.id ?? 0 )"
+        postId.text = "PostId- \(post?.id ?? 0 )"
         titleLab.text = "Title- \(post?.title ?? "" )"
         body.text = "Body - \(post?.body ?? "" )"
         

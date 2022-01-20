@@ -79,12 +79,12 @@ extension HomeVC : UITableViewDataSource {
 }
 
 extension HomeVC : UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 350
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
-        let objDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "DeatilVC") as? DetailVC
+        let objDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC
         let post = objPostList[indexPath.row]
         if let objDetailVC = objDetailVC {
             objDetailVC.post = post
