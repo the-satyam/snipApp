@@ -29,8 +29,9 @@ class HomeVC: UIViewController {
            super.viewDidLoad()
 
            
-           viewModel.getPost{ objmodel in
+           viewModel.getPost {  objmodel  in
                              self.objPostList = objmodel
+               
                DispatchQueue.main.async {
 
                    self.objTableView.reloadData()
@@ -50,20 +51,20 @@ class HomeVC: UIViewController {
 
 extension HomeVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objPostList.count
+        return viewModel.getTotalPOst()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let objCell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell
-        let post = objPostList[indexPath.row]
-        objCell!.setData(post:post)
+        let post = indexPath.row
+        objCell!.setData(row:post,viewModel:viewModel)
         return objCell!
     }
     
 }
 
 extension HomeVC : UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

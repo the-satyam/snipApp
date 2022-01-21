@@ -29,6 +29,15 @@ class HomeVM {
             }
     }
     
+    func getPostFor(row:Int) -> PostModel? {
+        if (objPostList.count > 0){
+        return objPostList[row]
+        }
+            return nil
+    }
+    func getTotalPOst() -> Int{
+        return objPostList.count
+    }
     
 }
 
