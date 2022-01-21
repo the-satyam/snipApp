@@ -217,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="1733" y="33"/>
         </scene>
-        <!--View Controller-->
+        <!--Log SuccessVC-->
         <scene sceneID="M09-Ge-ezY">
             <objects>
-                <viewController id="Tcd-FL-1bV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogSuccessVC" id="Tcd-FL-1bV" customClass="LogSuccessVC" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sxL-Ff-9Ft">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -441,6 +441,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgm-G3-F3Y">
+                                <rect key="frame" x="104" y="695" width="184" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Back Data">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sendData:" destination="g7D-t3-aPR" eventType="touchUpInside" id="mgn-wl-hoF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tHy-OV-ruW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

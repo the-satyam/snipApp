@@ -26,6 +26,7 @@
 		61A07BFD2799CD120036AE9A /* ExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A07BFC2799CD120036AE9A /* ExploreVC.swift */; };
 		61A07BFF2799D1B20036AE9A /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A07BFE2799D1B20036AE9A /* ExploreCell.swift */; };
 		61A07C03279A711C0036AE9A /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A07C02279A711C0036AE9A /* HomeVM.swift */; };
+		61F465B4279AA4F900E501FA /* LogSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F465B3279AA4F900E501FA /* LogSuccessVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		61A07BFC2799CD120036AE9A /* ExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVC.swift; sourceTree = "<group>"; };
 		61A07BFE2799D1B20036AE9A /* ExploreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
 		61A07C02279A711C0036AE9A /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		61F465B3279AA4F900E501FA /* LogSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSuccessVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,12 +151,12 @@
 			path = FirstAppUITests;
 			sourceTree = "<group>";
 		};
-		61A07BE22797EFB30036AE9A /* Snip */ = {
+		61A07BE22797EFB30036AE9A /* SnipHome */ = {
 			isa = PBXGroup;
 			children = (
 				6156E5A427967AFC0041611E /* SnipVC.swift */,
 			);
-			path = Snip;
+			path = SnipHome;
 			sourceTree = "<group>";
 		};
 		61A07BE62797F1C00036AE9A /* Home */ = {
@@ -202,9 +204,10 @@
 		61A07BF6279946C10036AE9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				61F465B2279AA4CF00E501FA /* LogSuccess */,
 				61A07BFA279948720036AE9A /* Login */,
 				61A07BF9279948120036AE9A /* Signup */,
-				61A07BE22797EFB30036AE9A /* Snip */,
+				61A07BE22797EFB30036AE9A /* SnipHome */,
 				61A07BFB2799CCC00036AE9A /* Explore */,
 				61A07BE62797F1C00036AE9A /* Home */,
 				61A07BF82799477A0036AE9A /* Detail */,
@@ -259,6 +262,14 @@
 				61A07C02279A711C0036AE9A /* HomeVM.swift */,
 			);
 			path = VM;
+			sourceTree = "<group>";
+		};
+		61F465B2279AA4CF00E501FA /* LogSuccess */ = {
+			isa = PBXGroup;
+			children = (
+				61F465B3279AA4F900E501FA /* LogSuccessVC.swift */,
+			);
+			path = LogSuccess;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +406,7 @@
 				6156E5D1279699100041611E /* SignupVC.swift in Sources */,
 				61A07BF12799207C0036AE9A /* PostModel.swift in Sources */,
 				6156E5A527967AFC0041611E /* SnipVC.swift in Sources */,
+				61F465B4279AA4F900E501FA /* LogSuccessVC.swift in Sources */,
 				61A07C03279A711C0036AE9A /* HomeVM.swift in Sources */,
 				61A07BEF27987DCE0036AE9A /* MovieCell.swift in Sources */,
 				6156E5A127967AFC0041611E /* AppDelegate.swift in Sources */,

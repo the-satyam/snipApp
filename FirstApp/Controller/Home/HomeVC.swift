@@ -7,10 +7,12 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController , ShareDataBackward{
+    
     
     
     //Data source array for tableview
+    
 
        var objPostList : [PostModel?] = []
 
@@ -42,8 +44,13 @@ class HomeVC: UIViewController {
 
            }
        }
-
-       }
+    
+    func sendBackdata(data: String?) {
+        print(data ?? "")
+    }
+    
+    
+}
 
 
 
@@ -73,6 +80,7 @@ extension HomeVC : UITableViewDelegate {
         let post = objPostList[indexPath.row]
         if let objDetailVC = objDetailVC {
             objDetailVC.post = post
+            objDetailVC.delgate = self
             self.navigationController?.pushViewController(objDetailVC, animated: true)
         }
         
