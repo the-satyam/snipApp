@@ -21,7 +21,7 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var objTableView: UITableView!
     
-
+    var viewModel = HomeVM()
        
 
        override func viewDidLoad() {
@@ -29,38 +29,22 @@ class HomeVC: UIViewController {
            super.viewDidLoad()
 
            
-
-           //try to fetch the data from the server
-
-           let objNetworking = Networking()
-
-           //call the getpost method
-
-           objNetworking.getPostFrom(serverUrl: Server.kPost.rawValue) { objmodel in
-
-               
-
-               //set data received from server
-
-               self.objPostList = objmodel
-
-               
-
-               //Refresh the tableview
-
+           viewModel.getPost{ objmodel in
+                             self.objPostList = objmodel
                DispatchQueue.main.async {
 
                    self.objTableView.reloadData()
 
                }
 
-               print("something happened")
+               print("Success")
 
            }
+       }
 
        }
 
-}
+
 
 
 
