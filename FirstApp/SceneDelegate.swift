@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBar = mainStory.instantiateViewController(withIdentifier: "tabbarcontroll") as? UITabBarController
         if let _ = Utility.shared.fetchUser(), let _ = Utility.shared.fetchPassword(){
             if let tabBar = tabBar{
-                window?.rootViewController = tabBar
+                let objNavControll = UINavigationController(rootViewController: tabBar)
+                window?.rootViewController = objNavControll
             }
         }
         else{
