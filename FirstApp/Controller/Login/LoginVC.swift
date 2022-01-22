@@ -13,8 +13,7 @@ class LoginVC: UIViewController {
     
     @IBOutlet var passwordTF: UITextField!
     
-    //@IBOutlet weak var userTF: UITextField!
-    //@IBOutlet weak var passwordTF: UITextField!
+
     override func viewDidLoad() {
        
         super.viewDidLoad()
@@ -26,17 +25,26 @@ class LoginVC: UIViewController {
         let user = userTF.text ?? ""
         let password = passwordTF.text ?? ""
         if(user.count > 0 && user == "Satyam") && (password.count > 0 && password == "1234"){
+            
+            //save user detail
+            saveCredential(name: user, password: password)
             let objLogSuccessVC = self.storyboard?.instantiateViewController(withIdentifier: "LogSuccessVC") as? LogSuccessVC
             if let objLogSuccessVC = objLogSuccessVC {
-                self.navigationController?.pushViewController(objLogSuccessVC, animated: true)
+               self.navigationController?.pushViewController(objLogSuccessVC, animated: true)
                 
             }
             
         }
         else{
             print("CheckCredential")
-            showAlert(message: "Check Credential")
+            showAlert(message:MESSAGE.WRONG_CREDENTIAL.rawValue)
         }
+        
+    }
+    func saveCredential(name:String , password:String){
+        let objUserDefault = UserDefaults.standard
+        objUserDefault.set(name, forKey:"username")
+        objUserDefault.set(password, forKey:"password")
         
     }
     

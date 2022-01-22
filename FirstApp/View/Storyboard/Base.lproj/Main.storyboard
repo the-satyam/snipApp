@@ -365,6 +365,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" badgeValue="3" id="rcb-3K-F5e"/>
+                    <connections>
+                        <outlet property="email" destination="APg-Qn-CaU" id="LwJ-iB-Lkc"/>
+                        <outlet property="name" destination="MYI-3d-9IE" id="sqe-Y4-iXJ"/>
+                        <outlet property="password" destination="ogZ-h8-5id" id="yDW-6q-PtG"/>
+                        <outlet property="userid" destination="lQf-Hg-itD" id="cFw-Nx-lbW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71I-aP-LAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -528,7 +534,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="vKG-wb-QIH">
             <objects>
-                <tabBarController id="Yki-iT-TIg" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbarcontroll" id="Yki-iT-TIg" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="DrU-nI-DGZ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K2t-vW-d2a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

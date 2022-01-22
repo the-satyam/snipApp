@@ -13,6 +13,7 @@ class LogSuccessVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        showAlert(message: MESSAGE.SUCCESS.rawValue)
     }
     
 
