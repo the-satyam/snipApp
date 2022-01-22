@@ -20,8 +20,4 @@ struct PostModel: Decodable {
 }
 
 
-enum Server : String {
 
-    case kPost = "https://jsonplaceholder.typicode.com/posts"
-
-}

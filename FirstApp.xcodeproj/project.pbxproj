@@ -27,6 +27,10 @@
 		61A07BFF2799D1B20036AE9A /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A07BFE2799D1B20036AE9A /* ExploreCell.swift */; };
 		61A07C03279A711C0036AE9A /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A07C02279A711C0036AE9A /* HomeVM.swift */; };
 		61F465B4279AA4F900E501FA /* LogSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F465B3279AA4F900E501FA /* LogSuccessVC.swift */; };
+		61F465B7279BBFE300E501FA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F465B6279BBFE300E501FA /* Constant.swift */; };
+		61F465B9279BC03500E501FA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F465B8279BC03500E501FA /* Extension.swift */; };
+		61F465BB279BCCB700E501FA /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F465BA279BCCB700E501FA /* Utility.swift */; };
+		61F465BE279BCE3400E501FA /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F465BD279BCE3400E501FA /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		61A07BFE2799D1B20036AE9A /* ExploreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
 		61A07C02279A711C0036AE9A /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		61F465B3279AA4F900E501FA /* LogSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSuccessVC.swift; sourceTree = "<group>"; };
+		61F465B6279BBFE300E501FA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		61F465B8279BC03500E501FA /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		61F465BA279BCCB700E501FA /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		61F465BD279BCE3400E501FA /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +129,7 @@
 		6156E59F27967AFC0041611E /* FirstApp */ = {
 			isa = PBXGroup;
 			children = (
+				61F465B5279BBF7D00E501FA /* Common */,
 				61A07C01279A70EC0036AE9A /* VM */,
 				61A07BF4279946620036AE9A /* Model */,
 				61A07BF52799469A0036AE9A /* View */,
@@ -204,6 +213,7 @@
 		61A07BF6279946C10036AE9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				61F465BC279BCE1300E501FA /* Profile */,
 				61F465B2279AA4CF00E501FA /* LogSuccess */,
 				61A07BFA279948720036AE9A /* Login */,
 				61A07BF9279948120036AE9A /* Signup */,
@@ -270,6 +280,24 @@
 				61F465B3279AA4F900E501FA /* LogSuccessVC.swift */,
 			);
 			path = LogSuccess;
+			sourceTree = "<group>";
+		};
+		61F465B5279BBF7D00E501FA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				61F465B6279BBFE300E501FA /* Constant.swift */,
+				61F465B8279BC03500E501FA /* Extension.swift */,
+				61F465BA279BCCB700E501FA /* Utility.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		61F465BC279BCE1300E501FA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				61F465BD279BCE3400E501FA /* ProfileVC.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,18 +433,22 @@
 			files = (
 				6156E5D1279699100041611E /* SignupVC.swift in Sources */,
 				61A07BF12799207C0036AE9A /* PostModel.swift in Sources */,
+				61F465B7279BBFE300E501FA /* Constant.swift in Sources */,
 				6156E5A527967AFC0041611E /* SnipVC.swift in Sources */,
 				61F465B4279AA4F900E501FA /* LogSuccessVC.swift in Sources */,
 				61A07C03279A711C0036AE9A /* HomeVM.swift in Sources */,
 				61A07BEF27987DCE0036AE9A /* MovieCell.swift in Sources */,
+				61F465B9279BC03500E501FA /* Extension.swift in Sources */,
 				6156E5A127967AFC0041611E /* AppDelegate.swift in Sources */,
 				61A07BF327993CDA0036AE9A /* DetailVC.swift in Sources */,
 				61A07BEB27980F160036AE9A /* Networking.swift in Sources */,
 				61A07BFD2799CD120036AE9A /* ExploreVC.swift in Sources */,
+				61F465BE279BCE3400E501FA /* ProfileVC.swift in Sources */,
 				61A07BE82797F7510036AE9A /* HomeVC.swift in Sources */,
 				6156E5A327967AFC0041611E /* SceneDelegate.swift in Sources */,
 				61A07BE42797F0160036AE9A /* LoginVC.swift in Sources */,
 				61A07BFF2799D1B20036AE9A /* ExploreCell.swift in Sources */,
+				61F465BB279BCCB700E501FA /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -78,9 +78,13 @@ extension HomeVC : UITableViewDelegate {
         print(indexPath.row)
         let objDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC
         let post = objPostList[indexPath.row]
+        let closure = { data in
+            print(data)
+        }
         if let objDetailVC = objDetailVC {
             objDetailVC.post = post
             objDetailVC.delgate = self
+            objDetailVC.closure = closure
             self.navigationController?.pushViewController(objDetailVC, animated: true)
         }
         

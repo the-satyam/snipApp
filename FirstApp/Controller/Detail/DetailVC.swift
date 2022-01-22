@@ -13,6 +13,7 @@ class DetailVC: UIViewController {
     
     var post:PostModel?
     var delgate : ShareDataBackward?
+    var closure:((String)->()?)? = nil
     @IBOutlet weak var userId   :      UILabel!
     @IBOutlet weak var postId   :      UILabel!
     @IBOutlet weak var titleLab :    UILabel!
@@ -31,7 +32,10 @@ class DetailVC: UIViewController {
     }
     
     @IBAction func sendData(_ sender: Any) {
-        delgate?.sendBackdata(data: "Backward Data Printing") 
+       // delgate?.sendBackdata(data: "Backward Data Printing")
+        if let closure = closure{
+            closure("data printing from closure")
+        }
     }
     
 
