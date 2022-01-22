@@ -32,7 +32,24 @@ class ProfileVC: UIViewController {
         
     }
     
-
+    
+    @IBAction func logout(_ sender: Any) {
+        
+        delCredential()
+        let objLoginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
+        if let objLoginVC = objLoginVC {
+           self.navigationController?.pushViewController(objLoginVC, animated: true)
+            
+        }
+        
+    func delCredential(){
+            let objUserDefault = UserDefaults.standard
+            objUserDefault.set(nil, forKey:"username")
+            objUserDefault.set(nil, forKey:"password")
+            
+        }
+    }
+    
 }
 
 
